@@ -9,13 +9,15 @@ export default {
       const text = body.message?.text;
       
       if (text === '/start') {
-        await fetch(https://api.telegram.org/bot${token}/sendMessage, {
+        const telegramUrl = https://api.telegram.org/bot${token}/sendMessage;
+        await fetch(telegramUrl, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ chat_id: chatId, text: 'Привет! Я бот по ортопедии. Пока работаю в тестовом режиме.' })
         });
       } else if (text) {
-        await fetch(https://api.telegram.org/bot${token}/sendMessage, {
+        const telegramUrl = https://api.telegram.org/bot${token}/sendMessage;
+        await fetch(telegramUrl, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ chat_id: chatId, text: Твой вопрос: ${text}\n\n(Скоро подключу базу знаний по ортопедии) })
