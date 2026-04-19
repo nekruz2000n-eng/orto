@@ -13,14 +13,14 @@ export default {
         await fetch(telegramUrl, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ chat_id: chatId, text: 'Привет! Я бот по ортопедии. Пока работаю в тестовом режиме.' })
+          body: JSON.stringify({ chat_id: chatId, text: 'Привет! Я бот по ортопедии.' })
         });
       } else if (text) {
         const telegramUrl = https://api.telegram.org/bot${token}/sendMessage;
         await fetch(telegramUrl, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ chat_id: chatId, text: Твой вопрос: ${text}\n\n(Скоро подключу базу знаний по ортопедии) })
+          body: JSON.stringify({ chat_id: chatId, text: Твой вопрос: ${text} })
         });
       }
       return new Response('OK');
