@@ -1,5 +1,0 @@
-name = "ortoai"
-main = "src/index.js"
-compatibility_date = "2024-01-01"
-[vars]
-BOT_TOKEN = "8390112746:AAEQMj-cglBXi0cZlqXqKgPjSw5advzxfVs"
